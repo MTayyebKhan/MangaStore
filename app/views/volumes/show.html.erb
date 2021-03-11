@@ -1,0 +1,5 @@
+<h1><%=@volume.version%></h1>
+<h2>Volume:</h2>
+<% @volume.mangas.each do |manga|%>
+    <%=link_to manga.title, manga_path(manga.id)%>
+<%end%>

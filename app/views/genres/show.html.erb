@@ -1,0 +1,6 @@
+<section class="card">
+    <h1><%=@genre.name%></h1>
+    <% @genre.mangas.each do |manga|%>
+    <%=link_to manga.title, manga_path(manga.id)%>
+    <%end%>
+</section>

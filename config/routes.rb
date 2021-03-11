@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  get "/", to: "mangas#index"
-  get "/mangas", to: "mangas#index"
+  root to: "mangas#index"
+  resources :mangas
+  resources :volumes
+  resources :genres
+  # get "/volumes/:id", to: "volumes#show", as: "volume"
 end
