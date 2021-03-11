@@ -4,7 +4,7 @@ class Manga < ApplicationRecord
   has_many :genres, through: :mangas_genres
 
   def list_genres
-    (self.genres.map {|genre| genre.name}).join (', ')
+    self.genres.map {|genre| genre.name}.join (', ')
   end
   
 end
